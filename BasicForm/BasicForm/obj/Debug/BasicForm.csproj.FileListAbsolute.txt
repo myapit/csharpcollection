@@ -1,0 +1,8 @@
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\bin\Debug\BasicForm.exe.config
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\bin\Debug\BasicForm.exe
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\bin\Debug\BasicForm.pdb
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\obj\Debug\BasicForm.csprojResolveAssemblyReference.cache
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\obj\Debug\BasicForm.MainForm.resources
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\obj\Debug\BasicForm.csproj.GenerateResource.Cache
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\obj\Debug\BasicForm.exe
+C:\Users\domokun\Documents\SharpDevelop Projects\BasicForm\BasicForm\obj\Debug\BasicForm.pdb
