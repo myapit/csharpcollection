@@ -1,0 +1,12 @@
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\bin\Debug\PusatData.exe.config
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\bin\Debug\PusatData.exe
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\bin\Debug\PusatData.pdb
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.csprojResolveAssemblyReference.cache
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.MainForm.resources
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.csproj.GenerateResource.Cache
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.exe
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.pdb
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.JoomlaMigrate.resources
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\bin\Debug\System.Data.SQLite.dll
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\bin\Debug\System.Data.SQLite.xml
+C:\Users\domokun\Documents\SharpDevelop Projects\PusatData\PusatData\obj\Debug\PusatData.MdiForm.resources
