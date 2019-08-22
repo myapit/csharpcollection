@@ -1,0 +1,10 @@
+ID to Date of birth
+====================
+long ID = 8210195017089;
+int year = Convert.ToInt32(ID.ToString(0, 2));
+int month = Convert.ToInt32(ID.ToString(2, 2));
+int day = Convert.ToInt32(ID.ToString(4, 2));
+DateTime dob = new DateTime(year, month, day);
+txtBirthdate.Text = dob.ToLongDateString();
+
+
