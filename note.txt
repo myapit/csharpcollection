@@ -7,4 +7,9 @@ int day = Convert.ToInt32(ID.ToString(4, 2));
 DateTime dob = new DateTime(year, month, day);
 txtBirthdate.Text = dob.ToLongDateString();
 
-
+string strIDnumber = txtIDNumber.Text;
+int intYear = Convert.ToInt32("19" + strIDnumber.Substring(0,2));
+int intMonth = Convert.ToInt32(strIDnumber.Substring(2,2));
+int intDay = Convert.ToInt32(strIDnumber.Substring(4,2));
+DateTime dtBirthDateFromID = new DateTime(intYear, intMonth,intDay);
+dtBirthDate.Date = dtBirthDateFromID;
