@@ -13,3 +13,6 @@ int intMonth = Convert.ToInt32(strIDnumber.Substring(2,2));
 int intDay = Convert.ToInt32(strIDnumber.Substring(4,2));
 DateTime dtBirthDateFromID = new DateTime(intYear, intMonth,intDay);
 dtBirthDate.Date = dtBirthDateFromID;
+
+
+https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
