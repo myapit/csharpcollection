@@ -17,3 +17,29 @@ dtBirthDate.Date = dtBirthDateFromID;
 
 https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
 https://www.c-sharpcorner.com/UploadFile/naresh.avari/develop-and-install-a-windows-service-in-C-Sharp/
+
+
+https://nimblegecko.com/how-to-store-login-details-securely-in-application-config-file/
+using System.Configuration
+
+ // Load application configuration file so we can update it
+    var configuration = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+
+    configuration.AppSettings.Settings["username"].Value = EncryptString("new username", configPassword);
+    configuration.AppSettings.Settings["password"].Value = EncryptString("new password", configPassword);
+    configuration.Save();
+
+    // Reload app config file
+    ConfigurationManager.RefreshSection("appSettings");
+
+    var encryptedUsername = ConfigurationManager.AppSettings["username"];
+    var encryptedPassword = ConfigurationManager.AppSettings["password"];
+    Console.WriteLine(string.Format("Encrypted username: {0}", encryptedUsername));
+    Console.WriteLine(string.Format("Encrypted password: {0}", encryptedPassword));
+    
+    // Decrypt username & password and print to the console
+    var decryptedUsername = DecryptString(encryptedUsername, configPassword);
+    var decryptedPassword = DecryptString(encryptedPassword, configPassword);
+
+    Console.WriteLine(string.Format("Decrypted username: {0}", decryptedUsername));
+    Console.WriteLine(string.Format("Decrypted password: {0}", decryptedPassword));

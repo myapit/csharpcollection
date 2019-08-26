@@ -14,3 +14,4 @@ D:\devel\github\csharpcollection\BasicForm\BasicForm\obj\Debug\BasicForm.MainFor
 D:\devel\github\csharpcollection\BasicForm\BasicForm\obj\Debug\BasicForm.csproj.GenerateResource.Cache
 D:\devel\github\csharpcollection\BasicForm\BasicForm\obj\Debug\BasicForm.exe
 D:\devel\github\csharpcollection\BasicForm\BasicForm\obj\Debug\BasicForm.pdb
+D:\devel\github\csharpcollection\BasicForm\BasicForm\bin\Debug\auth.db
