@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Text;
 using System.Security.Cryptography;  
+using System.Configuration;
 
 namespace BasicForm
 {
@@ -107,6 +108,32 @@ namespace BasicForm
 				    MessageBox.Show("The Caps Lock key is ON.");  
 				} 
 		}
+		
+		
+		void Button4Click(object sender, EventArgs e)
+		{
+		    // Load application configuration file so we can update it
+		   // var configuration = ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location);
+		
+		   // configuration.AppSettings.Settings["username"].Value = EncryptString("new username", configPassword);
+		   // configuration.AppSettings.Settings["password"].Value = EncryptString("new password", configPassword);
+		   // configuration.Save();
+		
+		    // Reload app config file
+		   // ConfigurationManager.RefreshSection("appSettings");
+		   
+		   string msg = Settings1.Default.DBName;
+		   MessageBox.Show(msg);
+		}//end button config
+		
+		
+		void Button5Click(object sender, EventArgs e)
+		{
+				System.Diagnostics.Debug.WriteLine(Settings1.Default.DBName);
+				System.Diagnostics.Debug.WriteLine(ConfigurationSettings.AppSettings["DBName"]);
+				//System.Diagnostics.Debug.WriteLine(System.Configuration.);
+			
+		} //end button config
 	}
 	
 }

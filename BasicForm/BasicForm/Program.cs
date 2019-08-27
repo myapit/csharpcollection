@@ -25,8 +25,8 @@ namespace BasicForm
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			/* Begin MessageBoxManager Setting */
-			MessageBoxManager.OK = "Alright";
-            MessageBoxManager.Cancel = "Noway";
+			MessageBoxManager.OK = "Okeh";
+            MessageBoxManager.Cancel = "Batai";
            	MessageBoxManager.Register();
 			/* End MessageBoxManager Setting */
 			Application.Run(new MainForm());
