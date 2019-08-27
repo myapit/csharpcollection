@@ -15,6 +15,7 @@ using System.Text;
 using System.Security.Cryptography;  
 using System.Configuration;
 
+
 namespace BasicForm
 {
 	/// <summary>
@@ -130,7 +131,11 @@ namespace BasicForm
 		void Button5Click(object sender, EventArgs e)
 		{
 				System.Diagnostics.Debug.WriteLine(Settings1.Default.DBName);
-				System.Diagnostics.Debug.WriteLine(ConfigurationSettings.AppSettings["DBName"]);
+				//System.Diagnostics.Debug.WriteLine(ConfigurationSettings.AppSettings["DBName"]);
+				
+				
+				
+				//Properties.Settings.Default.Save();
 				//System.Diagnostics.Debug.WriteLine(System.Configuration.);
 			
 		} //end button config
