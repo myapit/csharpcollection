@@ -33,6 +33,7 @@ namespace BasicForm
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+			textBox1.CharacterCasing = CharacterCasing.Upper;
 		}
 		void Button1Click(object sender, EventArgs e)
 		{
@@ -139,6 +140,11 @@ namespace BasicForm
 				//System.Diagnostics.Debug.WriteLine(System.Configuration.);
 			
 		} //end button config
+		
+		void TextBox1TextChanged(object sender, EventArgs e)
+		{
+			
+		}
 	}
 	
 }

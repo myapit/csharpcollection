@@ -1,0 +1,2 @@
+#csc.exe /t:exe /out:MyApplication.exe MyApplication.cs
+#MyApplication.exe
