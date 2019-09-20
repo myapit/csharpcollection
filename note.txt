@@ -43,3 +43,119 @@ using System.Configuration
 
     Console.WriteLine(string.Format("Decrypted username: {0}", decryptedUsername));
     Console.WriteLine(string.Format("Decrypted password: {0}", decryptedPassword));
+
+-------------
+
+TxtInput //This is the textbox user inputs
+LblLengthstrong //Label to show length
+LblUpper //Label that shows it in uppercase
+LblLower //Label that shows it in lowercase
+LblRight //Label that shows shows last 3 characters
+LblSubscript //Label that shows characters 1 through 3
+//show length of all characters inputed
+
+ private void BtnLength_Click(object sender, EventArgs e)
+        {
+            LblLength.Text = TxtInput.Text.Length.ToString();
+        }
+//make to characters upper
+
+  private void btnUpper_Click(object sender, EventArgs e)
+        {
+            LblUpper.Text = TxtInput.Text.ToUpper();
+        }
+//make characters to lowercase
+
+ private void BtnLower_Click(object sender, EventArgs e)
+        {
+            LblLower.Text = TxtInput.Text.ToLower();
+        }
+//show last 3 characters
+
+ private void BtnRight_Click(object sender, EventArgs e)
+        {
+            LblRight.Text = TxtInput.Text.Substring(TxtInput.Text.Length - 3);
+        }
+//show characters in position 1 through 3
+
+ private void BtnSubscript_Click(object sender, EventArgs e)
+        {
+            LblSubscript.Text = TxtInput.Text.Substring(1, 3);
+        }
+//ASCII
+
+  private void BtnGo_Click(object sender, EventArgs e)
+        {
+            string name;
+            int letter;
+
+            name = TxtInput.Text;
+
+            for (int index = 0; index < name.Length; index++)
+            {
+                letter = name[index];
+                MessageBox.Show(letter.ToString());
+            }
+        }
+//Password
+
+      int InNumTry = 0;
+    private void BtnGo_Click_1(object sender, EventArgs e)
+    {
+        string password;
+        password = TxtIn.Text;
+
+            switch (password)
+            {
+                case " ": MessageBox.Show("Passowrd is empty.");
+                    break;
+
+                case "MIKE": MessageBox.Show("Password is OK!");
+                    FrmBOO newForm = new FrmBOO();
+                    newForm.Show();
+                    break;
+
+                default:
+                    InNumTry++;
+                    MessageBox.Show("Invalid Passwrod, try again!");
+                    TxtIn.Text = "";
+                    TxtIn.Focus();
+                    break;
+            }
+
+            if (InNumTry >= 3)
+            {
+                MessageBox.Show("You have tried too many times, have a good day.");
+                TxtIn.Enabled = false;
+            }
+        }
+// Adding timer(In the timer add the code under this (Add add timer1.Start(); in the start form)
+
+ private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime datetime = DateTime.Now;
+            this.LblTime.Text = datetime.ToString();
+        }
+
+
+private void mytextbox_KeyPress(object sender, KeyPressEventArgs e)
+
+{
+
+e.KeyChar = Char.ToUpper(e.KeyChar);
+
+}
+
+
+private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar= (e.KeyChar.ToString()).ToUpper().ToCharArray()[0];
+        }
+
+
+You need to assign the results of ToUpper back to the textbox:
+
+txtBox.Text = txtBox.Text.ToUpper();
+Alternatively, set the CharacterCasing property of the textbox to Upper:
+
+txtBox.CharacterCasing = CharacterCasing.Upper;
