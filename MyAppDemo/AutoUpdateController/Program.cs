@@ -35,6 +35,7 @@ namespace AutoUpdateController
 			{
 				Console.WriteLine("[c] - Check for update.");
 				Console.WriteLine("[x] - Exit update controller.");
+				Console.Write("Choice ? : ");
 				string keyInput = Console.ReadLine();
 				switch(keyInput){
 					case "c":
@@ -65,6 +66,7 @@ namespace AutoUpdateController
 			string[] remoteVersionParts = (new Regex(@"\s+")).Split(remoteVersionText);
 			string remoteUrl = remoteVersionParts[1];
 			string remoteHash = remoteVersionParts[2];
+			Console.WriteLine(remoteUrl);
 			
 			if(!File.Exists("version.txt"))
 			{
@@ -88,7 +90,7 @@ namespace AutoUpdateController
 				Console.WriteLine("Current Version: {0}, New version: {1}", localVersion, remoteVersion);
 				while (true)
 				{
-					Console.Write("Perform update? ");
+					Console.Write("Perform update? [Y]es / [N]o :");
 					string response = Console.ReadLine().Trim().ToLower();
 					if (response.StartsWith("y"))
 					{
@@ -121,7 +123,62 @@ namespace AutoUpdateController
 	
 			Console.Write("Downloading {0} to {1} - ", remoteUrl, downloadDestination);
 			WebClient downloadifier = new WebClient();
-			downloadifier.DownloadFile(remoteUrl, downloadDestination);
+			/////downloadifier.DownloadFile(remoteUrl, downloadDestination);
+			/*
+			 * //-> Check if url is valid */
+			/*WebRequest serverRequest = WebRequest.Create(remoteUrl); 
+			WebResponse serverResponse; 
+			try //Try to get response from server 
+			{ 
+			    serverResponse = serverRequest.GetResponse(); 
+			} 
+			catch //If could not obtain any response 
+			{ 
+			    Console.WriteLine("Error: 404");
+				//return 0;
+			}
+			*/
+			//serverResponse.Close();
+			//-> Check if url is valid  
+			WebRequest serverRequest = WebRequest.Create(remoteUrl);  
+			WebResponse serverResponse;  
+			try //Try to get response from server  
+			{  
+			    serverResponse = serverRequest.GetResponse();  
+			}  
+			catch //If could not obtain any response  
+			{  
+			     Console.WriteLine("Error: file not foound");
+			}  
+			//serverResponse.Close();
+	
+			HttpWebRequest req = (HttpWebRequest) WebRequest.Create(remoteUrl);
+			HttpWebResponse response = (HttpWebResponse) req.GetResponse();
+			if (response.StatusCode != HttpStatusCode.OK)
+			{
+			   Console.WriteLine("Error: 404");
+			} else {
+				Console.WriteLine("by pass try catcah ?");
+				try
+		   		{
+		        	downloadifier.DownloadFile(remoteUrl, downloadDestination);
+			    }
+			    catch (WebException e)
+			    {
+			        var statusCode = ((HttpWebResponse) e.Response).StatusCode;
+			
+			        if (statusCode == HttpStatusCode.NotFound && System.IO.File.Exists(downloadDestination))
+			        {
+			            System.IO.File.Delete(downloadDestination);
+			            //maybe log the occurence as well
+			            Console.WriteLine("Error: file not foound");
+			        }
+			    } //ed catch
+			}
+			
+			
+		    
+		    
 			Console.WriteLine("done.");
 			
 			Console.Write("Validating download - ");
