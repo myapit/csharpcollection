@@ -1,0 +1,6 @@
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\obj\Debug\AutoUpdateController.csprojResolveAssemblyReference.cache
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\bin\Debug\AutoUpdateController.exe.config
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\bin\Debug\AutoUpdateController.exe
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\bin\Debug\AutoUpdateController.pdb
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\obj\Debug\AutoUpdateController.exe
+D:\devel\github\csharpcollection\MyAppDemo\AutoUpdateController\obj\Debug\AutoUpdateController.pdb

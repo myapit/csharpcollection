@@ -1,0 +1,6 @@
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.exe.config
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.exe
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.pdb
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.csprojResolveAssemblyReference.cache
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.exe
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.pdb
