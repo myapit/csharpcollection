@@ -154,5 +154,16 @@ namespace BasicSQLiteCRUD
 			} //End Using
 		}
 		
+	    // TODO: load data using DataTable style	
+	    private void DisplayData()  
+        {  
+            /* con.Open();
+            DataTable dt=new DataTable();  
+            adapt=new SqlDataAdapter("select * from tbl_Record",con);  
+            adapt.Fill(dt);  
+            dataGridView1.DataSource = dt;  
+            con.Close();  */
+        }  
+		
 	} //END MainFOrm
 }//END NAMESPACE
