@@ -1,0 +1,11 @@
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\BasicSQLiteCRUD.exe.config
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\BasicSQLiteCRUD.exe
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\BasicSQLiteCRUD.pdb
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\obj\Debug\BasicSQLiteCRUD.csprojResolveAssemblyReference.cache
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\obj\Debug\BasicSQLiteCRUD.MainForm.resources
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\obj\Debug\BasicSQLiteCRUD.csproj.GenerateResource.Cache
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\obj\Debug\BasicSQLiteCRUD.exe
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\obj\Debug\BasicSQLiteCRUD.pdb
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\MyBasicCrud.db3
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\System.Data.SQLite.dll
+D:\devel\github\csharpcollection\MyAppDemo\BasicSQLiteCRUD\bin\Debug\System.Data.SQLite.xml
