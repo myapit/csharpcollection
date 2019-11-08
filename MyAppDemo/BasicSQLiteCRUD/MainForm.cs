@@ -55,12 +55,13 @@ namespace BasicSQLiteCRUD
 
 		    try {
 		        insertSQL.ExecuteNonQuery();
-		        resetForm();
-				loadDataSQL();
 		    }
 		    catch (Exception ex) {
 		        throw new Exception(ex.Message);
-		    }    
+		    }
+			
+		    resetForm();
+			loadDataSQL();		    
 		}
 		
 		/* Custom Function */
@@ -78,6 +79,26 @@ namespace BasicSQLiteCRUD
 		private void loadDataSQL()
 		{
 			//sqlCon.Open();
+			/*dgvPerson.Update();
+			dgvPerson.DataSource = null;
+    		dgvPerson.Refresh();
+    		*/
+    		/*
+    		do
+			{
+			   foreach (DataGridViewRow row in dgvPerson.Rows)
+			   {
+			      try
+			      {
+			        dgvPerson.Rows.Remove(row);
+			      }
+			      catch (Exception) { }
+			   }
+			} while (dgvPerson.Rows.Count > 1);
+			*/
+			dgvPerson.Rows.Clear();
+			dgvPerson.Refresh();
+    		
 			SQLiteCommand cmdSQL = new SQLiteCommand("SELECT * FROM person ORDER BY id ASC", sqlCon);
 			
 			using( SQLiteDataReader readData =  cmdSQL.ExecuteReader())
