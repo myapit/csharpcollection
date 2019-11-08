@@ -21,6 +21,7 @@ namespace BasicSQLiteCRUD
 	public partial class MainForm : Form
 	{
 		private SQLiteConnection sqlCon;// = new SQLiteConnection("Data Source=MyBasicCrud.db3;Version=3;");
+		private string IDPerson;
 		
 		public MainForm()
 		{
@@ -46,25 +47,65 @@ namespace BasicSQLiteCRUD
 		
 		void BtnSimpanClick(object sender, EventArgs e)
 		{
-			//sqlCon.Open();
-			SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO Person (Nama, Alamat) VALUES ($nama, $alamat)", sqlCon);
-			insertSQL.Parameters.Add("$nama", System.Data.DbType.String).Value = txtNama.Text.Trim();
-			insertSQL.Parameters.Add("$alamat", System.Data.DbType.String).Value =txtAlamat.Text.Trim();
-			//insertSQL.Parameters.Add(txtNama.Text.Trim);
-		    //insertSQL.Parameters.Add(txtAlamat.Text.Trim);
-
-		    try {
-		        insertSQL.ExecuteNonQuery();
-		    }
-		    catch (Exception ex) {
-		        throw new Exception(ex.Message);
-		    }
+			if (btnSimpan.Text == "Simpan")
+			{
+				SQLiteCommand insertSQL = new SQLiteCommand("INSERT INTO Person (Nama, Alamat) VALUES ($nama, $alamat)", sqlCon);
+				insertSQL.Parameters.Add("$nama", System.Data.DbType.String).Value = txtNama.Text.Trim();
+				insertSQL.Parameters.Add("$alamat", System.Data.DbType.String).Value =txtAlamat.Text.Trim();
+	
+			    try {
+			        insertSQL.ExecuteNonQuery();
+			    }
+			    catch (Exception ex) {
+			        throw new Exception(ex.Message);
+			    }
+				
+			    resetForm();
+				loadDataSQL();
+			}
 			
-		    resetForm();
-			loadDataSQL();		    
+			if (btnSimpan.Text == "Kemaskini")
+			{
+				SQLiteCommand insertSQL = new SQLiteCommand("UPDATE Person Set Nama=$nama, Alamat=$alamat WHERE id=$id", sqlCon);
+				insertSQL.Parameters.Add("$nama", System.Data.DbType.String).Value = txtNama.Text.Trim();
+				insertSQL.Parameters.Add("$alamat", System.Data.DbType.String).Value =txtAlamat.Text.Trim();
+				insertSQL.Parameters.Add("$id", System.Data.DbType.String).Value = IDPerson;
+				insertSQL.ExecuteNonQuery();
+				resetForm();
+				loadDataSQL();
+			}
+					    
 		}
 		
-		/* Custom Function */
+		void BtnResetClick(object sender, EventArgs e)
+		{
+			resetForm();
+		}
+		void DgvPersonCellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+		{
+			//string ID = dgvPerson.Rows[e.RowIndex].Cells[0].Value.ToString(); //- also work
+			IDPerson = dgvPerson.CurrentRow.Cells[0].Value.ToString();
+			txtNama.Text = dgvPerson.CurrentRow.Cells[1].Value.ToString();
+			txtAlamat.Text = dgvPerson.CurrentRow.Cells[2].Value.ToString();
+			btnSimpan.Text = "Kemaskini";
+			btnHapus.Enabled = true;
+		}
+		
+		void BtnHapusClick(object sender, EventArgs e)
+		{
+			SQLiteCommand insertSQL = new SQLiteCommand("DELETE FROM Person WHERE id=$id", sqlCon);
+			//insertSQL.Parameters.Add("$id", System.Data.DbType.String).Value = IDPerson;
+			insertSQL.Parameters.AddWithValue("$id",IDPerson.ToString());
+			insertSQL.ExecuteNonQuery();
+			resetForm();
+			loadDataSQL();
+		}
+		
+		void DgvPersonCellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+		{
+		}
+		
+		/******************************** Custom Function ***************************/
 		
 		private void resetForm()
 		{
@@ -72,18 +113,14 @@ namespace BasicSQLiteCRUD
 			txtNama.Text = "";
 			txtAlamat.Text ="";
 			btnSimpan.Text = "Simpan";
-			btnReset.Enabled = false;
+			//btnReset.Enabled = false;
 			btnHapus.Enabled = false;
 		}
 		
 		private void loadDataSQL()
 		{
-			//sqlCon.Open();
-			/*dgvPerson.Update();
-			dgvPerson.DataSource = null;
-    		dgvPerson.Refresh();
-    		*/
-    		/*
+
+    		/* // -Also Work
     		do
 			{
 			   foreach (DataGridViewRow row in dgvPerson.Rows)

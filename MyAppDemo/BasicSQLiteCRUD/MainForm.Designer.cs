@@ -72,24 +72,31 @@ namespace BasicSQLiteCRUD
 			this.Alamat});
 			this.dgvPerson.Location = new System.Drawing.Point(362, 82);
 			this.dgvPerson.Name = "dgvPerson";
-			this.dgvPerson.Size = new System.Drawing.Size(279, 186);
+			this.dgvPerson.Size = new System.Drawing.Size(390, 186);
 			this.dgvPerson.TabIndex = 6;
+			this.dgvPerson.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPersonCellContentDoubleClick);
+			this.dgvPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvPersonCellMouseDoubleClick);
 			// 
 			// ID
 			// 
+			this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
 			this.ID.HeaderText = "ID";
 			this.ID.Name = "ID";
-			this.ID.Visible = false;
+			this.ID.ReadOnly = true;
+			this.ID.Width = 43;
 			// 
 			// Nama
 			// 
+			this.Nama.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
 			this.Nama.HeaderText = "Nama";
 			this.Nama.Name = "Nama";
+			this.Nama.ReadOnly = true;
 			// 
 			// Alamat
 			// 
 			this.Alamat.HeaderText = "Alamat";
 			this.Alamat.Name = "Alamat";
+			this.Alamat.ReadOnly = true;
 			// 
 			// btnSimpan
 			// 
@@ -146,6 +153,7 @@ namespace BasicSQLiteCRUD
 			this.btnHapus.TabIndex = 4;
 			this.btnHapus.Text = "Hapus";
 			this.btnHapus.UseVisualStyleBackColor = false;
+			this.btnHapus.Click += new System.EventHandler(this.BtnHapusClick);
 			// 
 			// btnReset
 			// 
@@ -157,6 +165,7 @@ namespace BasicSQLiteCRUD
 			this.btnReset.TabIndex = 5;
 			this.btnReset.Text = "Reset";
 			this.btnReset.UseVisualStyleBackColor = false;
+			this.btnReset.Click += new System.EventHandler(this.BtnResetClick);
 			// 
 			// label3
 			// 
@@ -172,7 +181,7 @@ namespace BasicSQLiteCRUD
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(688, 334);
+			this.ClientSize = new System.Drawing.Size(798, 334);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.btnReset);
 			this.Controls.Add(this.btnHapus);
