@@ -35,6 +35,10 @@ namespace BasicSQLiteCRUD
 			//
 			sqlCon = new SQLiteConnection("Data Source=MyBasicCrud.db3;Version=3;");
 			sqlCon.Open();
+			
+			// Formating Data Grid View
+			dgvPerson.AllowUserToAddRows = false; // disable extra empty row
+			dgvPerson.RowHeadersVisible = false; // hide header column
 		}
 		
 		
