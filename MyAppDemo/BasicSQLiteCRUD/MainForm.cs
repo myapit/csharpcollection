@@ -88,9 +88,9 @@ namespace BasicSQLiteCRUD
 		void DgvPersonCellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
 			//string ID = dgvPerson.Rows[e.RowIndex].Cells[0].Value.ToString(); //- also work
-			IDPerson = dgvPerson.CurrentRow.Cells[0].Value.ToString();
-			txtNama.Text = dgvPerson.CurrentRow.Cells[1].Value.ToString();
-			txtAlamat.Text = dgvPerson.CurrentRow.Cells[2].Value.ToString();
+			IDPerson = dgvPerson.CurrentRow.Cells[1].Value.ToString();
+			txtNama.Text = dgvPerson.CurrentRow.Cells[2].Value.ToString();
+			txtAlamat.Text = dgvPerson.CurrentRow.Cells[3].Value.ToString();
 			btnSimpan.Text = "Kemaskini";
 			btnHapus.Enabled = true;
 		}
@@ -104,6 +104,18 @@ namespace BasicSQLiteCRUD
 			resetForm();
 			loadDataSQL();
 		}
+		
+		void BtnSearchClick(object sender, EventArgs e)
+		{
+			if (txtSearch.Text.Trim() != "") {
+				loadDataSQL(txtSearch.Text.Trim());
+				Debug.WriteLine(txtSearch.Text.Trim());
+			} else {
+				MessageBox.Show("Please enter text to search.","Search",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+				txtSearch.Focus();
+			}
+		}  
+		
 		
 		void DgvPersonCellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -121,7 +133,7 @@ namespace BasicSQLiteCRUD
 			btnHapus.Enabled = false;
 		}
 		
-		private void loadDataSQL()
+		private void loadDataSQL(string searchKeyword = "")
 		{
 
     		/* // -Also Work
@@ -137,10 +149,19 @@ namespace BasicSQLiteCRUD
 			   }
 			} while (dgvPerson.Rows.Count > 1);
 			*/
+			int countRow = 1;
+			string sqlQuery = "";
+			
 			dgvPerson.Rows.Clear();
 			dgvPerson.Refresh();
+			
+			if (searchKeyword.Trim() == "")
+				sqlQuery = "SELECT * FROM person ORDER BY id ASC";
+			else
+				sqlQuery = "SELECT * FROM person WHERE nama LIKE '%" + searchKeyword + "%' OR alamat LIKE '%" + searchKeyword + "%' ORDER BY id ASC";
+			
     		
-			SQLiteCommand cmdSQL = new SQLiteCommand("SELECT * FROM person ORDER BY id ASC", sqlCon);
+			SQLiteCommand cmdSQL = new SQLiteCommand(sqlQuery, sqlCon);
 			
 			using( SQLiteDataReader readData =  cmdSQL.ExecuteReader())
 			{
@@ -148,6 +169,7 @@ namespace BasicSQLiteCRUD
 				{
 					dgvPerson.Rows.Add(
 						new object[] {
+							countRow++,
 							readData.GetValue(0),  // using column index
 							readData.GetValue(readData.GetOrdinal("nama")), // using column name
 							readData.GetValue(2)
@@ -167,7 +189,8 @@ namespace BasicSQLiteCRUD
             adapt.Fill(dt);  
             dataGridView1.DataSource = dt;  
             con.Close();  */
-        }  
+        }
+		
 		
 	} //END MainFOrm
 }//END NAMESPACE

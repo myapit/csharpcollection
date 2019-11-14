@@ -26,6 +26,9 @@ namespace BasicSQLiteCRUD
 		private System.Windows.Forms.DataGridViewTextBoxColumn ID;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Alamat;
+		private System.Windows.Forms.TextBox txtSearch;
+		private System.Windows.Forms.Button btnSearch;
+		private System.Windows.Forms.DataGridViewTextBoxColumn number;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -49,6 +52,7 @@ namespace BasicSQLiteCRUD
 		private void InitializeComponent()
 		{
 			this.dgvPerson = new System.Windows.Forms.DataGridView();
+			this.number = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Alamat = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +64,8 @@ namespace BasicSQLiteCRUD
 			this.btnHapus = new System.Windows.Forms.Button();
 			this.btnReset = new System.Windows.Forms.Button();
 			this.label3 = new System.Windows.Forms.Label();
+			this.txtSearch = new System.Windows.Forms.TextBox();
+			this.btnSearch = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPerson)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -67,15 +73,21 @@ namespace BasicSQLiteCRUD
 			// 
 			this.dgvPerson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvPerson.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+			this.number,
 			this.ID,
 			this.Nama,
 			this.Alamat});
 			this.dgvPerson.Location = new System.Drawing.Point(362, 82);
 			this.dgvPerson.Name = "dgvPerson";
-			this.dgvPerson.Size = new System.Drawing.Size(390, 186);
+			this.dgvPerson.Size = new System.Drawing.Size(390, 143);
 			this.dgvPerson.TabIndex = 6;
 			this.dgvPerson.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvPersonCellContentDoubleClick);
 			this.dgvPerson.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvPersonCellMouseDoubleClick);
+			// 
+			// number
+			// 
+			this.number.HeaderText = "No.";
+			this.number.Name = "number";
 			// 
 			// ID
 			// 
@@ -176,12 +188,34 @@ namespace BasicSQLiteCRUD
 			this.label3.TabIndex = 7;
 			this.label3.Text = "Basic Create, Read, Update and Delete (CRUD) with SQLITE";
 			// 
+			// txtSearch
+			// 
+			this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtSearch.Location = new System.Drawing.Point(362, 235);
+			this.txtSearch.Name = "txtSearch";
+			this.txtSearch.Size = new System.Drawing.Size(288, 22);
+			this.txtSearch.TabIndex = 8;
+			// 
+			// btnSearch
+			// 
+			this.btnSearch.BackColor = System.Drawing.Color.Wheat;
+			this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSearch.Location = new System.Drawing.Point(672, 231);
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.Size = new System.Drawing.Size(80, 29);
+			this.btnSearch.TabIndex = 9;
+			this.btnSearch.Text = "Search";
+			this.btnSearch.UseVisualStyleBackColor = false;
+			this.btnSearch.Click += new System.EventHandler(this.BtnSearchClick);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(798, 334);
+			this.Controls.Add(this.btnSearch);
+			this.Controls.Add(this.txtSearch);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.btnReset);
 			this.Controls.Add(this.btnHapus);
