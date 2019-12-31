@@ -7,3 +7,5 @@ D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.pdb
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyBasicCrud.db3
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\System.Data.SQLite.dll
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\System.Data.SQLite.xml
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\DynamicLibraryLink.dll
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\DynamicLibraryLink.pdb
