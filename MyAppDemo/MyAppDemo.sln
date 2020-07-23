@@ -1,7 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-# SharpDevelop 5.1
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAppDemo", "MyAppDemo\MyAppDemo.csproj", "{BB5D7D33-8F10-425E-AD4E-6442DD33F0BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoUpdateController", "AutoUpdateController\AutoUpdateController.csproj", "{82A73F5A-5E98-470E-AA7A-2459CF8D7780}"
@@ -9,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicSQLiteCRUD", "BasicSQLiteCRUD\BasicSQLiteCRUD.csproj", "{8D8CF9C3-529C-4DFD-AAA9-A71A7FFCC473}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicLibraryLink", "DynamicLibraryLink\DynamicLibraryLink.csproj", "{811F1601-714A-47B3-93EE-A17BE99EB7AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteProtect", "SQLiteProtect\SQLiteProtect.csproj", "{711C5D14-154C-459D-A7CA-71551D3A8DE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,5 +35,15 @@ Global
 		{811F1601-714A-47B3-93EE-A17BE99EB7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811F1601-714A-47B3-93EE-A17BE99EB7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811F1601-714A-47B3-93EE-A17BE99EB7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{711C5D14-154C-459D-A7CA-71551D3A8DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711C5D14-154C-459D-A7CA-71551D3A8DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711C5D14-154C-459D-A7CA-71551D3A8DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711C5D14-154C-459D-A7CA-71551D3A8DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E536D861-92A2-477A-A995-BE4D6385599F}
 	EndGlobalSection
 EndGlobal

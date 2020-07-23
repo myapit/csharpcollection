@@ -1,7 +1,6 @@
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.exe.config
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.exe
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyAppDemo.pdb
-D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.csprojResolveAssemblyReference.cache
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.exe
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.pdb
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\MyBasicCrud.db3
@@ -9,3 +8,6 @@ D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\System.Data.SQLit
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\System.Data.SQLite.xml
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\DynamicLibraryLink.dll
 D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\bin\Debug\DynamicLibraryLink.pdb
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.csprojAssemblyReference.cache
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.csproj.CoreCompileInputs.cache
+D:\devel\github\csharpcollection\MyAppDemo\MyAppDemo\obj\Debug\MyAppDemo.csproj.CopyComplete
